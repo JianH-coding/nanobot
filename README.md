@@ -80,22 +80,36 @@
 
 ## Table of Contents
 
-- [News](#-news)
-- [Key Features](#key-features-of-nanobot)
-- [Architecture](#️-architecture)
-- [Features](#-features)
-- [Install](#-install)
-- [Quick Start](#-quick-start)
-- [Chat Apps](#-chat-apps)
-- [Agent Social Network](#-agent-social-network)
-- [Configuration](#️-configuration)
-- [Multiple Instances](#-multiple-instances)
-- [CLI Reference](#-cli-reference)
-- [Docker](#-docker)
-- [Linux Service](#-linux-service)
-- [Project Structure](#-project-structure)
-- [Contribute & Roadmap](#-contribute--roadmap)
-- [Star History](#-star-history)
+- [📢 News](#-news)
+- [Key Features of nanobot:](#key-features-of-nanobot)
+- [🏗️ Architecture](#️-architecture)
+- [Table of Contents](#table-of-contents)
+- [✨ Features](#-features)
+- [📦 Install](#-install)
+  - [Update to latest version](#update-to-latest-version)
+- [🚀 Quick Start](#-quick-start)
+- [💬 Chat Apps](#-chat-apps)
+- [🌐 Agent Social Network](#-agent-social-network)
+- [⚙️ Configuration](#️-configuration)
+  - [Providers](#providers)
+  - [MCP (Model Context Protocol)](#mcp-model-context-protocol)
+  - [Security](#security)
+- [🧩 Multiple Instances](#-multiple-instances)
+  - [Quick Start](#quick-start)
+  - [Path Resolution](#path-resolution)
+  - [How It Works](#how-it-works)
+  - [Minimal Setup](#minimal-setup)
+  - [Common Use Cases](#common-use-cases)
+  - [Notes](#notes)
+- [💻 CLI Reference](#-cli-reference)
+- [🐳 Docker](#-docker)
+  - [Docker Compose](#docker-compose)
+  - [Docker](#docker)
+- [🐧 Linux Service](#-linux-service)
+- [📁 Project Structure](#-project-structure)
+- [🤝 Contribute \& Roadmap](#-contribute--roadmap)
+  - [Contributors](#contributors)
+- [⭐ Star History](#-star-history)
 
 ## ✨ Features
 
@@ -1122,6 +1136,7 @@ MCP tools are automatically discovered and registered on startup. The LLM can us
 | Option | Default | Description |
 |--------|---------|-------------|
 | `tools.restrictToWorkspace` | `false` | When `true`, restricts **all** agent tools (shell, file read/write/edit, list) to the workspace directory. Prevents path traversal and out-of-scope access. |
+| `tools.allowedDir` | `[]` | List of additional directories the agent can access when `restrictToWorkspace` is true. Paths are in addition to the main workspace. Example: `["~/projects", "/data"]` |
 | `tools.exec.pathAppend` | `""` | Extra directories to append to `PATH` when running shell commands (e.g. `/usr/sbin` for `ufw`). |
 | `channels.*.allowFrom` | `[]` (deny all) | Whitelist of user IDs. Empty denies all; use `["*"]` to allow everyone. |
 
